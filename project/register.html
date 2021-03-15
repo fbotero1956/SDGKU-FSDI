@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pet Salon</title>
+</head>
+<body>
+    <header class="container">
+        <div class="site-header container">
+        <h1>The Fashion Pet</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </div>
+    </header>
+    <main class="container">
+        <div>
+            <h2>Register your Pet...</h1>
+        <p>
+            <label for="name">Pet Name:</label>
+            <input type="text" name="name" id="petName">
+        </p>
+        <p>
+            <label for="type">Type:</label>
+            <select name="type" id="petType">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option
+                value="alpaca">Alpaca</option>
+                <option
+                value="llama">LLama</option>
+            </select>
+        </p>
+        <p>
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="petAge">
+        </p>
+        <p>
+            <label for="gender">Gender:</label>
+            <input type="text" name="gender" id="petGender">
+        </p>
+        <p>
+            <label for="breed">Breed:</label>
+            <input type="text" name="breed" id="petBreed">
+        </p>
+        <p>
+            <label for="service">Service:</label>
+            <select name="service" id="petService">
+                <option value="shower">Grooming</option>
+                <option value="nails">Nails Cut</option>
+                <option
+                value="hair Cut">Hair Cut</option>
+                <option
+                value="massage">Massage</option>
+            </select>
+        </p>
+        <p>
+            <label for="owner">Owner:</label>
+            <input type="text" name="owner" id="petOwner">
+        </p>
+        <p>
+            <label for="phone">Phone:</label>
+            <input type="text" name="phone" id="petPhone">
+        </p>
+       
+        </div>
+        <button type="button" class="btn btn-warning" onclick="register();">Register</button>
+
+     <!-- display in table--> 
+
+        <table class="table table-success table-striped">
+            <thead>
+            <tr>
+                <th>Name</th> 
+                <th>Type</th>
+                <th>Age</th> 
+                <th>Gender</th> 
+                <th>Breed</th> 
+                <th>Service</th> 
+                <th>Owner</th> 
+                <th>Phone</th> 
+            </tr>
+        </thead>
+        <tbody id='petTable'>
+          
+        </tbody>
+        </table>
+<!-- display in blocks-->
+        <p id="pets" class="pet"></p>
+    </main>
+    <footer class="container footer">
+        <p id="footer-info" class="footer-about"></p>
+        
+    </footer>
+<script src="js/app.js"></script>
+<script src="js/display.js"></script>
+  
+</body>
+</html>
