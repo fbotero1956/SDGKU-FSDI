@@ -1,0 +1,135 @@
+/*
+header{
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQexwHmlZpAGJ1TL0qldLAqWU3bLgIE09R-mQ&usqp=CAU);
+    height: 25vh;
+    background-repeat: no-repeat;
+    background-color:white;
+    border:2px solid black;
+}
+header{
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQexwHmlZpAGJ1TL0qldLAqWU3bLgIE09R-mQ&usqp=CAU);
+    height: 25vh;
+    background-repeat: no-repeat;
+    border:2px solid black;
+}*/
+header{
+    background-image:url("doggies.png");
+    height: 55vh;
+    background-repeat: no-repeat;
+    background-color: lightblue;
+    border:2px solid black;
+}
+.servicesimg{
+    background-image:url("Dog in bath.png");
+    height: auto;
+    background-repeat: repeat;
+    margin:0;
+    height:55vh;
+    bacground-color: white;
+
+}
+.servicesimg p{
+    padding-top:10%;
+    font-size:3rem;
+    font-weight:bolder;
+    text-align:center;
+}
+.aboutImg{
+    display:none;
+
+}
+.site-header{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+nav{
+    margin-top: 340px;
+    font-weight: bold;
+    
+}
+nav a{
+    text-decoration: none;
+    padding:10px;
+}
+@media(min-width:768px){
+    .header{
+        margin-left:75px;
+        margin-right:75px;
+    }
+    .site-header {
+        display: flex;
+        flex-direction: row;
+    } 
+    nav{
+        margin-top: 20px;
+    }
+
+    h1{
+        padding:150px 300px;
+        font-size:2.5rem;
+    }
+    .carImg{
+        height:55vh;
+    }
+    .aboutImg{
+        display:flex;
+        flex-direction: row;
+        column-gap: 5px;
+        width:auto;
+        height:10vh;
+        justify-content: space-between;
+        margin-left:100px;
+        margin-right:100px;
+        
+    
+    }
+
+}
+.footer{
+    color:white;
+    background-color:black;
+    width:100%;
+    text-align:center;
+}
+
+main{
+    margin:5px 10px;
+}
+label{
+    width: 70px;
+    font-weight: bold;
+}
+#pets{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 2rem;
+    margin-top: 1rem;
+    margin-left: 5px;
+    row-gap: 1rem;
+   
+
+}
+.pet{
+    background-color: gray;
+    color:white;
+    border:1px solid black;
+    border-radius: 1rem;
+    padding:1rem;
+}
+.btn{
+    margin-bottom:20px;
+}
+#countPetTypes{
+    width: 325px;
+    font-weight:bold;
+    padding:5px;
+
+}
+#profits{
+    width: 150px;
+    font-weight:bold;
+    padding:5px;
+}
+
+
