@@ -52,10 +52,10 @@
         <p>
             <label for="service">*Service:</label>
             <select name="service" id="petService">
-                <option value="shower">Grooming</option>
+                <option value="bath">Bath</option>
                 <option value="nails">Nails Cut</option>
                 <option
-                value="hair Cut">Hair Cut</option>
+                value="hair">Hair Cut</option>
                 <option
                 value="massage">Massage</option>
             </select>
@@ -87,8 +87,24 @@
                 <th>Owner</th> 
                 <th>Phone</th> 
                 <th>Price</th>
+                <th>Delete</th>
             </tr>
         </thead>
+        <div>
+            <h2>Search for your Pet</h2>
+    
+                <select class='searchClass' name="searchType" id="searchCriteria">
+                    <option value="name">Name</option>
+                    <option value="service">Service</option>
+                    <option value="type">Pet Type</option>
+                </select>
+               
+                <input class='searchClass' type="text" name="search" id="searchPet">
+
+                <button class="btn-warning searchClass" onclick="searchPet();">Search</button>
+                <button class="btn-warning searchClass" onclick="displayAll();">Display All</button>
+
+        </div>
         <tbody id='petTable'>
           
         </tbody>

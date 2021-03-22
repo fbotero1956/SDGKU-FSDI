@@ -11,7 +11,7 @@ const salon={
     },
     pets:[]
 }
-
+var c=0;
 
 class Pet{
     constructor(name,type,age,gender,breed,service,owner,phone){
@@ -24,6 +24,7 @@ class Pet{
         this.owner=owner;
         this.phone=phone;
         this.price=0;
+        this.id=c++;
     }
 }
 
@@ -38,6 +39,7 @@ var txtOwner=document.getElementById('petOwner');
 var txtPhone=document.getElementById('petPhone');
 
 
+
 function register(){
     console.log(txtName.value);
     console.log(txtType.value);
@@ -47,6 +49,7 @@ function register(){
     console.log(txtService.value);
     console.log(txtOwner.value);
     console.log(txtPhone.value);
+
 
     // validate data prior to adding pet
     if(txtName.value == "" || txtType.value =="" || txtAge.value =="" || txtGender.value =="" || txtBreed.value =="" || txtService.value =="" || txtOwner.value == "" || txtPhone.value ==""){
@@ -108,14 +111,62 @@ function displayInfo(){
     <p> Hours are from ${open} to ${close}</p>
     <p> Monday through Saturday</p>`;
     }
+//delete pet from collection and display table
+function deletePet(petId){
+        
+        var indexDelete;
+        var tr=$('#'+petId);
+
+        for(var i=0; i<salon.pets.length;i++){
+            var selected=salon.pets[i];
+            if (selected.id === petId){
+                indexDelete = i;
+            }
+        }
+        salon.pets.splice(indexDelete,1);
+        tr.remove();
+}
+    
+    // search by pet name, type of pet or service
+    function searchPet(){
+        var st=$('#searchCriteria').val();
+        var ss=$('#searchPet').val();
+
+        var searchString = ss.toLowerCase();
+        for(var i=0;i<salon.pets.length;i++){
+            var selected=salon.pets[i];
+
+            $('#'+selected.id).removeClass();
+            if(st=='name' && searchString === selected.name.toLowerCase()){
+                $('#'+selected.id).addClass('selected');
+            }else if(st=='type' && searchString === selected.type.toLowerCase()){
+                $('#'+selected.id).addClass('selected');
+            }else if(st=='service' && searchString === selected.service.toLowerCase()){
+                $('#'+selected.id).addClass('selected');
+            }else
+            $('#'+selected.id).addClass('notSelected');
+        }
+        $('#searchPet').val("");
+        $('#searchCriteria').val("name");
+    }    
+    function displayAll(){
+        for(var i=0;i<salon.pets.length;i++){
+            var selected=salon.pets[i];
+            $('#'+selected.id).removeClass();
+        }
+    }
+
     function init(){
        //Initialization
-        var scooby= new Pet("Scooby","dog",50,"Dane","male","shower","Felipe","555-555-5555");
+        var scooby= new Pet("Scooby","dog",5,"Dane","male","bath","Felipe","555-555-5555");
         salon.pets.push(scooby);
         displayTable(scooby);
-        var scrappy= new Pet("Scrappy","dog",40,"lab","male","shower","Felipe","555-555-5555");
+        var scrappy= new Pet("Scrappy","dog",4,"lab","male","bath","Felipe","555-555-5555");
         salon.pets.push(scrappy);
         displayTable(scrappy);
+        var mabel= new Pet("Mabel","cat",3,"Tux","female","massage","Felipe","555-555-5555");
+        salon.pets.push(mabel);
+        displayTable(mabel);
         
         displayInfo();
 

@@ -1,17 +1,4 @@
-/*
-header{
-    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQexwHmlZpAGJ1TL0qldLAqWU3bLgIE09R-mQ&usqp=CAU);
-    height: 25vh;
-    background-repeat: no-repeat;
-    background-color:white;
-    border:2px solid black;
-}
-header{
-    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQexwHmlZpAGJ1TL0qldLAqWU3bLgIE09R-mQ&usqp=CAU);
-    height: 25vh;
-    background-repeat: no-repeat;
-    border:2px solid black;
-}*/
+
 header{
     background-image:url("doggies.png");
     height: 55vh;
@@ -70,7 +57,11 @@ nav a{
         font-size:2.5rem;
     }
     .carImg{
-        height:55vh;
+        height:25vh;
+        width:20%;
+        margin-left:40%;
+        margin-right:40%;
+        background-repeat: no-repeat;
     }
     .aboutImg{
         display:flex;
@@ -79,10 +70,7 @@ nav a{
         width:auto;
         height:10vh;
         justify-content: space-between;
-        margin-left:100px;
-        margin-right:100px;
-        
-    
+        margin:100px;   
     }
 
 }
@@ -118,8 +106,9 @@ label{
     padding:1rem;
 }
 .btn{
-    margin-bottom:20px;
+    border:none;
 }
+
 #countPetTypes{
     width: 325px;
     font-weight:bold;
@@ -131,5 +120,17 @@ label{
     font-weight:bold;
     padding:5px;
 }
+.selected{
+   font-weight: 600;
+}
+.notSelected{
+    color:white;
+    display:none;
+}
+.searchClass{
+    height: 40px;
+    margin-bottom:20px;
+}
+
 
 

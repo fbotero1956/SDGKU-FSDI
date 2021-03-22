@@ -1,8 +1,8 @@
 
 function displayTable(aPet){
     
-
-    if (aPet.service==="shower"){
+    //set the price for the services
+    if (aPet.service==="bath"){
        aPet.price=20;
    }else if (aPet.service==="nails"){
        aPet.price=15;
@@ -17,10 +17,9 @@ function displayTable(aPet){
    }else if(aPet.type == 'bird'){
       icon = '<i class="fas fa-crow"></i>';
    }
-  
-   
+   //build table row
     var row=`
-    <tr>
+    <tr id='${aPet.id}'>
         <td>${aPet.name}</td>
         <td>${icon}</td>
         <td>${aPet.age}</td>
@@ -30,18 +29,14 @@ function displayTable(aPet){
         <td>${aPet.owner}</td>
         <td>${aPet.phone}</td>
         <td>$${aPet.price}</td>
+        <td> <button class="btn btn-danger" onclick="deletePet(${aPet.id})">Delete</button></td>
     </tr>
     `;
-    //console.log(row);
-    //document.getElementById("petTable").innerHTML +=row;
+   //insert table row
     $('#petTable').append(row);
+    //recalculate the revenue
     profitCalculation();
+    //update pet count
     countPets();
-    
-
-    //<i class="fal fa-horse"></i>
-    //<i class="fas fa-sheep"></i>
-    //<i class="fas fa-cat"></i>'
-    //<i class="fas fa-crow"></i>
 
 }
