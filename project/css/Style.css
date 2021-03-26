@@ -12,7 +12,7 @@ header{
     background-repeat: repeat;
     margin:0;
     height:55vh;
-    bacground-color: white;
+    background-color: white;
 
 }
 .servicesimg p{
@@ -72,6 +72,26 @@ nav a{
         justify-content: space-between;
         margin:100px;   
     }
+    #imageMsg{
+        display:flex;
+        margin-left:25%;
+        font-size: 2rem;
+        font-weight:600;
+    }
+
+    .servicesMenu{
+        display:flex;
+        flex-direction: row;
+        column-gap: 8px;
+        justify-content: space-between;
+        margin:10px; 
+        font-size:1.5rem;
+        font-weight:600;
+    }
+    .servicesCenter{
+        margin-left:35%;
+        margin-right:30%;
+    }
 
 }
 .footer{
@@ -119,6 +139,7 @@ label{
     width: 150px;
     font-weight:bold;
     padding:5px;
+    margin-top:15px;
 }
 .selected{
    font-weight: 600;
@@ -130,6 +151,13 @@ label{
 .searchClass{
     height: 40px;
     margin-bottom:20px;
+}
+#successMsg{
+    font-weight:bold;
+    Font-size:1.5rem;
+}
+.text-area{
+    height:25vh; 
 }
 
 

@@ -27,11 +27,11 @@
             <h2>Register your Pet...</h1>
         <p>
             <label for="name">*Pet Name:</label>
-            <input type="text" name="name" id="petName">
+            <input class="form-control" type="text" name="name" id="petName">
         </p>
         <p>
             <label for="type">*Type:</label>
-            <select name="type" id="petType">
+            <select class="form-control" name="type" id="petType">
                 <option value="dog">Dog</option>
                 <option value="cat">Cat</option>
                 <option value="bird">Bird</option>
@@ -39,19 +39,19 @@
         </p>
         <p>
             <label for="age">*Age:</label>
-            <input type="number" name="age" id="petAge">
+            <input class="form-control" type="number" name="age" id="petAge">
         </p>
         <p>
             <label for="gender">*Gender:</label>
-            <input type="text" name="gender" id="petGender">
+            <input class="form-control" type="text" name="gender" id="petGender">
         </p>
         <p>
             <label for="breed">*Breed:</label>
-            <input type="text" name="breed" id="petBreed">
+            <input class="form-control" type="text" name="breed" id="petBreed">
         </p>
         <p>
             <label for="service">*Service:</label>
-            <select name="service" id="petService">
+            <select class="form-control" name="service" id="petService">
                 <option value="bath">Bath</option>
                 <option value="nails">Nails Cut</option>
                 <option
@@ -62,15 +62,20 @@
         </p>
         <p>
             <label for="owner">*Owner:</label>
-            <input type="text" name="owner" id="petOwner">
+            <input class="form-control" type="text" name="owner" id="petOwner">
         </p>
         <p>
             <label for="phone">*Phone:</label>
-            <input type="text" name="phone" id="petPhone">
+            <input class="form-control" type="text" name="phone" id="petPhone">
         </p>
        
         </div>
-        <button type="button" class="btn btn-warning" onclick="register();">Register</button>
+        <button type="button" class="btn btn-warning" id="register-btn">Register</button>
+     <!--   <span id="successMsg"> Your pet has been successfully registered!</span>-->
+     <div id="successMsg" class="alert alert-success notSelected" role="alert">
+        Your pet has been successfully registered!
+      </div>
+      
         <p id="profits"></p>
         <p id="countPetTypes">test</p>
      <!-- display in table--> 
@@ -101,8 +106,8 @@
                
                 <input class='searchClass' type="text" name="search" id="searchPet">
 
-                <button class="btn-warning searchClass" onclick="searchPet();">Search</button>
-                <button class="btn-warning searchClass" onclick="displayAll();">Display All</button>
+                <button class="btn-warning searchClass" id="search-btn">Search</button>
+                <button class="btn-warning searchClass" id="displayAll-btn">Display All</button>
 
         </div>
         <tbody id='petTable'>

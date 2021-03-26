@@ -33,9 +33,28 @@
             <button  class="btn" onclick="displayPrev();"><img src="img\prev.png" alt="Prev" width="100" height="100" ></img></button>
             <p id="imagePort"><img src="img\img1.jpg" id="1" alt="dog"  width="150" height="150" ></img></p>
             <button  class="btn" onclick="displayNext();"><img src="img\next.png" alt="Next" width="100" height="100"></img></button>
-            
         </div>
+        <p id="imageMsg" class="center aboutImg">Let us give your pet a bath they will love...</p>
     
+        <div>
+            <h2>Contact us:</h1>
+                <p>
+                    <label for="name">Your Name:</label>
+                    <input class="form-control" type="text" name="name" id="custName">
+                </p>
+                <p>
+                    <label for="email">Your eMail:</label>
+                    <input class="form-control" type="email" name="email" id="custEmail">
+                </p>
+                <p>
+                    <label for="msg">Your Message:</label>
+                    <textarea class="form-control text-area" rows="5" type="text" name="msg" id="custMsg"></textarea>
+                </p>
+                <button type="button" class="btn btn-warning" id="submit-btn">Submit</button>
+                <div id="custSuccessMsg" class="alert alert-success notSelected" role="alert">
+                    Message goes here!
+                </div>
+        </div>
 
     </main>
 

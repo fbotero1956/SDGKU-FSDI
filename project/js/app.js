@@ -58,10 +58,14 @@ function register(){
     else{
     var thePet = new Pet(txtName.value, txtType.value, txtAge.value, txtGender.value, txtBreed.value, txtService.value, txtOwner.value, txtPhone.value);
     
-    console.log(thePet);
     salon.pets.push(thePet);
     displayTable(thePet);    
     clear();
+    $('#successMsg').text('Your Pet Registration has been successfully added!');
+    $('#successMsg').removeClass('notSelected');
+    setTimeout(function(){
+        $('#successMsg').addClass('notSelected');},2000);
+   // $('#successMsg').show().delay(2000).animate('fadeOut');
 }
 }
 
@@ -125,6 +129,10 @@ function deletePet(petId){
         }
         salon.pets.splice(indexDelete,1);
         tr.remove();
+        $('#successMsg').text('Your Pet Registration has been successfully deleted!');
+        $('#successMsg').removeClass('notSelected');
+        setTimeout(function(){
+            $('#successMsg').addClass('notSelected');},2000);
 }
     
     // search by pet name, type of pet or service
@@ -133,6 +141,37 @@ function deletePet(petId){
         var ss=$('#searchPet').val();
 
         var searchString = ss.toLowerCase();
+       //using for each
+        salon.pets.forEach(aPet=>{
+            if(st=="name"){
+                if(aPet.name.toLowerCase().includes(searchString)){
+                    $('#'+aPet.id).addClass('selected');
+                    $('#'+aPet.id).removeClass('notSelected');
+                }else {
+                    $('#'+aPet.id).removeClass('selected');
+                    $('#'+aPet.id).addClass('notSelected');
+                    }
+            }else if(st=="service"){
+                    if(aPet.service.toLowerCase().includes(searchString)){
+                        $('#'+aPet.id).addClass('selected');
+                        $('#'+aPet.id).removeClass('notSelected');
+                    }else {
+                        $('#'+aPet.id).removeClass('selected');
+                        $('#'+aPet.id).addClass('notSelected');
+                          }
+                }else if(st=="type"){
+                        if(aPet.type.toLowerCase().includes(searchString)){
+                            $('#'+aPet.id).addClass('selected');
+                            $('#'+aPet.id).removeClass('notSelected');
+                        }else {
+                            $('#'+aPet.id).removeClass('selected');
+                            $('#'+aPet.id).addClass('notSelected');
+                             }
+                        }
+        }); 
+    };
+
+/* 
         for(var i=0;i<salon.pets.length;i++){
             var selected=salon.pets[i];
 
@@ -146,14 +185,17 @@ function deletePet(petId){
             }else
             $('#'+selected.id).addClass('notSelected');
         }
+      
         $('#searchPet').val("");
         $('#searchCriteria').val("name");
-    }    
+  */ 
     function displayAll(){
         for(var i=0;i<salon.pets.length;i++){
             var selected=salon.pets[i];
             $('#'+selected.id).removeClass();
         }
+        $('#searchPet').val("");
+        $('#searchCriteria').val("name");
     }
 
     function init(){
@@ -171,6 +213,15 @@ function deletePet(petId){
         displayInfo();
 
         //hook events
+        $('#register-btn').on('click',register);
+        $('#search-btn').on('click',searchPet);
+        $('#displayAll-btn').on('click',displayAll);
+        $('#searchPet').keypress(function(e){
+            if(e.key ==="Enter")
+            searchPet();
+        });
+        $('#searchPet').on('keyup',searchPet);
+        
 
         }
     window.onload=init;
