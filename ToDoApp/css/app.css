@@ -1,0 +1,41 @@
+body{
+    background-color:#f3f3f3;
+    border: 1px solid black;
+    height: 100vh;
+}
+h1{
+    color: white;
+    background-color: rgb(60, 28, 240);
+    text-align:center;
+    padding: 10px 0;
+}
+.capture-form{
+    width:400px;
+    border: .5px solid black;
+    background-color: aqua;
+    Margin-left:auto;
+    margin-right:auto;
+    padding:25px 20px;
+}
+btn{
+    text-align:-5px;
+}
+
+.todo-list{
+    padding:20px 10px;
+}
+.todo-list h6:hover {
+    font-weight:800;
+    color: red;
+}
+
+h6{
+    width:400px;
+    border: .5px solid black;
+    margin-top: 100px;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 20px 10px;
+
+}
+
