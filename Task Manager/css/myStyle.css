@@ -1,0 +1,49 @@
+h1{
+    color:blue;
+    text-align: center;
+}
+main{
+    display:flex;
+    flex-wrap:wrap;    
+}
+#list {
+    background-color:aqua;
+    height: 80vh;
+    flex:60%;
+    border: 1px solid black;
+}
+#details{
+    flex: 30%;
+    margin-left: 5px;
+
+}
+#details label{
+    margin-top: 7px;
+    font-weight: 600;
+}
+#iconImp {
+    color:red;
+    font-size: 35px;
+}
+#iconImp.far{
+    color:blue;
+
+}
+.btn{
+    margin-top: 8px;
+}
+footer{
+    width: 99%;
+    margin: 0 12px;
+    background-color: black;
+    color: white;
+    height: 15vh;
+    text-align: center;
+    justify-content: center;
+    padding-top: 25px;
+}
+@media screen and (max-width: 500px){
+footer{
+    margin-top: 10px;
+}
+}
