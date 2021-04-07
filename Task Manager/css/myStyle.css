@@ -1,0 +1,109 @@
+/* headings */
+h1{
+    color:blue;
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+/* main flexbox */
+main{
+    display:flex;
+    flex-wrap:wrap;    
+}
+
+#list{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(29,253,251,1) 50%, rgba(252,176,69,1) 100%);
+    flex:60%;
+    row-gap: 10px;
+    border: 2px solid black;
+}
+.tasks{
+    padding:1px;
+    background:white;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 5px;
+}
+.tasks p{
+    height: 1vh;
+}
+#iconImport {
+    color:red;
+    font-size: 20px;
+}
+#iconImport.far{
+    color:blue;
+    font-size: 15px;
+}
+
+#details{
+    flex: 30%;
+    margin-left: 5px;
+
+}
+#details label{
+    margin-top: 7px;
+    font-weight: 600;
+}
+#iconImp {
+    color:red;
+    font-size: 35px;
+}
+#iconImp.far{
+    color:blue;
+    font-size: 35px;
+
+}
+.btn{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(29,253,251,1) 50%, rgba(252,176,69,1) 100%);
+}
+#status{
+    display: inline-block;
+    width: 50%;
+}
+#btnDone{
+    display: inline-block;
+    background: blue;
+    height: 4vh;
+    margin-bottom: 2px;
+    font-size: 12px;
+
+}
+#btnEdit{
+    display: inline-block;
+    background:green;
+    height: 4vh;
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+#btnDelete{
+    display: inline-block;
+    background:red;
+    height: 4vh;
+    margin-bottom: 2px;
+    font-size: 12px;
+
+}
+footer{
+    width: 99%;
+    margin: 0 12px;
+    background-color: black;
+    color: white;
+    height: 12vh;
+    text-align: center;
+    justify-content: center;
+    padding-top: 25px;
+}
+/*
+@media screen and (max-width: 500px){
+footer{
+    margin-top: 10px;
+}
+}*/
+/* cool button
+
