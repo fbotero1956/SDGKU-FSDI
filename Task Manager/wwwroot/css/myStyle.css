@@ -1,0 +1,136 @@
+/* headings */
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    color:blue;
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+/* main flexbox */
+main{
+    display:flex;
+    flex-wrap:wrap;    
+}
+
+#list{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(29,253,251,1) 50%, rgba(252,176,69,1) 100%);
+    flex:60%;
+    row-gap: 10px;
+    border: 2px solid black;
+}
+.tasks{
+    padding:1px;
+    background:white;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 5px;
+}
+.tasks p{
+    height: 1vh;
+}
+.tasks strong{
+    margin-left:15px;
+}
+#iconImport {
+    color:red;
+    font-size: 20px;
+}
+#iconImport.far{
+    color:blue;
+    font-size: 15px;
+}
+
+#details{
+    flex: 30%;
+    margin-left: 5px;
+
+}
+#details label{
+    margin-top: 7px;
+    font-weight: 600;
+}
+#iconImp {
+    color:red;
+    font-size: 35px;
+}
+#iconImp.far{
+    color:blue;
+    font-size: 35px;
+
+}
+.btn{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+#btnSave{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(29,253,251,1) 50%, rgba(252,176,69,1) 100%);
+    font-weight: 800;
+}
+#status{
+    display: inline-block;
+    width: 50%;
+}
+#btnEdit{
+    display: inline-block;
+    background:green;
+    height: 4vh;
+    margin-bottom: 2px;
+    margin-left:86%;
+    font-size: 12px;
+}
+#btnDelete{
+    display: inline-block;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,55,29,1) 21%, rgba(252,176,69,1) 100%);
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: 800;
+
+}
+#btnClear{
+    display: inline-block;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(66,196,39,1) 21%, rgba(252,176,69,1) 100%);
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: 800;
+
+}
+footer{
+    width: 99%;
+    margin: 0 12px;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    height: 12vh;
+    text-align: center;
+    justify-content: center;
+    padding-top: 25px;
+    color:white;
+    font-weight: 800;
+}
+.hidden{
+    display:none;
+}
+#btnDetails{
+    display: inline-block;
+    background: blue;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 10px;
+    margin-left:80%;
+    border:1 slid black;
+    
+}
+/*
+@media screen and (max-width: 500px){
+footer{
+    margin-top: 10px;
+}
+}*/
+/* cool button
+
