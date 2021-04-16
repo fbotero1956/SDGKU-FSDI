@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Contact Us";
+}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+<link href="/css/myStyle.css" rel="stylesheet">
+
+    <div class="control" id="mainDiv">
+        <h3>Please Enter your contact information and we will get back to you as quickly as we can.</h3>
+        <label for="name"><strong>Name:</strong></label>
+        <input type="text" id="clientName" class="form-control">
+        <div id="alertName" class="alert alert-primary hidden" role="alert">
+            Please enter a valid name, cannot be blank!
+        </div>
+
+        <label><strong>eMail:</strong></label>
+        <input type="text" id="eMail" class="form-control">
+        <div id="alerteMail" class="alert alert-primary hidden" role="alert">
+            Please enter a valid email address, cannot be blank!
+        </div>
+
+        <label><strong>Message:</strong></label>
+        <textarea id="message" class="form-control"></textarea>
+        
+        <button id="btnSubmit" class="btn btn-primary">Submit</button>
+        <button id="btnClear" class="btn btn-primary">Clear Form</button>
+    </div>
+
+    <script src="/js/contactMsg.js"></script>
+    <script src="/js/contact.js"></script>
+
