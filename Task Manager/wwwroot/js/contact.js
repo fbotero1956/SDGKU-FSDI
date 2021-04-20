@@ -8,7 +8,7 @@ function readMsg(){
     //validation of name, must not be blank
     if (contactName == ""){
         $("#alertName").removeClass("hidden");
-        clientName.focus();
+        clientName.focus()
         setTimeout(function(){
         $("#alertName").addClass("hidden");
         }, 5000);
@@ -17,16 +17,22 @@ function readMsg(){
 
         //validate email address properly
     if (ValidateEmail(contacteMail)== false){
-        $("#alerteMail").removeClass("hidden");
+        $("#alertMail").removeClass("hidden");
         eMail.focus();
         setTimeout(function(){
-            $("#alerteMail").addClass("hidden");
+            $("#alertMail").addClass("hidden");
         }, 5000);
         return;
         }     
 
         //create an object and write it to the console
         var customerMsg = new ContactMsg(contactName,contacteMail,contactMsg);
+        $("#alertMsg").html(contactName + ", thank you for your question.  We will get back to you shortly");
+        $("#alertMsg").removeClass("hidden");
+        setTimeout(function(){
+            $("#alertMsg").addClass("hidden");
+        }, 5000);
+        clearForm();
         console.log(customerMsg);
     
 }

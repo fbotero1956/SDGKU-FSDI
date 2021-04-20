@@ -151,14 +151,27 @@ footer{
         border:1 slid black;
         
     }
+    #image{
+        width: 20vw; 
+        height: 40vh;
+    }
   }
 #image{
-    width: 20vw; 
+     
     height: 40vh;
 }
 #aboutDiv{
     display: flex;
     flex-direction: column;
+}
+.alert1{
+    background:red !important;
+    width:30%;
+    font-weight: 700;
+}
+.alert2{
+    width:45%;
+    font-weight: 700;
 }
 /*
 @media screen and (max-width: 500px){
