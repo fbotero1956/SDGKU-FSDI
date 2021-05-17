@@ -1,0 +1,14 @@
+h1{
+    color: red;
+    font-size: 25px;
+}
+.container{
+    border: 2px solid black;
+    background-color: aqua;
+}
+footer{
+    color:black;
+    font-weight: 700;
+    padding:30px;
+    text-align: center;
+}
